@@ -387,14 +387,24 @@ Tore09_D3D/
 
 ## 영상
 
-[1.기본적인 움직임과 숫자키로 무기 변경]https://github.com/user-attachments/assets/bfe77b60-601d-41d1-aab0-cf6439739b67
+1.기본적인 움직임과 숫자키로 무기 변경
 
-[2.위젯을 이용한 무기 변경]https://github.com/user-attachments/assets/e81c0c3d-aec9-40b4-88a9-731cb99a2395
+https://github.com/user-attachments/assets/bfe77b60-601d-41d1-aab0-cf6439739b67
 
-[3.무기 시연 1]https://github.com/user-attachments/assets/983a4e1b-25c8-43c9-bfd9-354761c9a63b
+2.위젯을 이용한 무기 변경
 
-[4.무기 시연 2]https://github.com/user-attachments/assets/ce96fae4-5a5c-4d74-a230-8b28f8eee824
+https://github.com/user-attachments/assets/e81c0c3d-aec9-40b4-88a9-731cb99a2395
 
-[5.IK Component를 이용한 캐릭터 관절 표현]https://github.com/user-attachments/assets/518fbcf1-78c9-4e86-aa2e-8a0e27ab7a3d
+3.무기 시연 1
+
+https://github.com/user-attachments/assets/983a4e1b-25c8-43c9-bfd9-354761c9a63b
+
+4.무기 시연 2
+
+https://github.com/user-attachments/assets/ce96fae4-5a5c-4d74-a230-8b28f8eee824
+
+5.IK Component를 이용한 캐릭터 관절 표현
+
+https://github.com/user-attachments/assets/518fbcf1-78c9-4e86-aa2e-8a0e27ab7a3d
 
 ---
