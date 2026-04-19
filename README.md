@@ -385,26 +385,34 @@ Tore09_D3D/
 
 ---
 
-## 영상
+## 7. 플레이 영상
+본 영상은 **3인칭 캐릭터 시스템 (GAS-like)** 프로젝트의 핵심 구현 내용과 어빌리티 시스템을 데모한 플레이 영상입니다.
 
-1.기본적인 움직임과 숫자키로 무기 변경
+### 🎥 1. 기본 이동 및 숫자키 무기 스와핑
+캐릭터의 기본적인 이동(Locomotion) 및 카메라 컨트롤과 함께, 숫자키를 활용한 즉각적인 무기 교체(Swapping) 시스템을 보여줍니다.
 
 https://github.com/user-attachments/assets/bfe77b60-601d-41d1-aab0-cf6439739b67
 
-2.위젯을 이용한 무기 변경
+### 🎥 2. 위젯(UI) 기반 무기 변경 
+숫자키 외에도 인게임 UI 위젯을 호출하여, 원하는 장비를 직관적으로 선택하고 장착하는 인벤토리/퀵슬롯 시스템입니다.
 
 https://github.com/user-attachments/assets/e81c0c3d-aec9-40b4-88a9-731cb99a2395
 
-3.무기 시연 1
+### 🎥 3. 전투 및 무기 시연 1
+장착한 무기에 따른 기본 공격 애니메이션, 타격 판정 등 GAS(Gameplay Ability System)와 유사하게 설계된 어빌리티 액션 시연입니다.
 
 https://github.com/user-attachments/assets/983a4e1b-25c8-43c9-bfd9-354761c9a63b
 
-4.무기 시연 2
+### 🎥 4. 전투 및 무기 시연 2
+다양한 무기와 스킬셋을 장착했을 때 캐릭터의 애니메이션 패턴과 이펙트가 자연스럽게 전환되는 모습을 확인할 수 있습니다.
 
 https://github.com/user-attachments/assets/ce96fae4-5a5c-4d74-a230-8b28f8eee824
 
-5.IK Component를 이용한 캐릭터 관절 표현
+### 🎥 5. IK (Inverse Kinematics) 컴포넌트를 이용한 관절 표현
+Raycast를 이용해 지형의 굴곡이나 경사면에 따라 캐릭터의 발(Foot)과 다리 관절이 자연스럽게 지면에 맞춰지는 Foot IK 시스템 적용 영상입니다.
 
 https://github.com/user-attachments/assets/518fbcf1-78c9-4e86-aa2e-8a0e27ab7a3d
+
+---
 
 ---
