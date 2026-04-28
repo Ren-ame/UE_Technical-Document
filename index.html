@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JS Documentation</header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Variables_and_Data_Types">Variables and Data Types</a>
+      <a class="nav-link" href="#Functions">Functions</a>
+      <a class="nav-link" href="#Control_Flow">Control Flow</a>
+      <a class="nav-link" href="#Objects_and_Arrays">Objects and Arrays</a>
+      <a class="nav-link" href="#ES6_Features">ES6 Features</a>
+      <a class="nav-link" href="#Asynchronous_JavaScript">Asynchronous JavaScript</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          JavaScript is a lightweight, interpreted, or just-in-time compiled
+          programming language with first-class functions. While it is most
+          well-known as the scripting language for Web pages, many non-browser
+          environments also use it, such as Node.js, Apache CouchDB, and Adobe
+          Acrobat.
+        </p>
+        <p>
+          JavaScript is a prototype-based, multi-paradigm, single-threaded,
+          dynamic language, supporting object-oriented, imperative, and
+          declarative (e.g. functional programming) styles. JavaScript's dynamic
+          capabilities include runtime object construction, variable parameter
+          lists, function variables, dynamic script creation (via
+          <code>eval</code>), object introspection, and source-code recovery.
+        </p>
+        <p>
+          The standard for JavaScript is ECMAScript. As of 2012, all modern
+          browsers fully support ECMAScript 5.1. Older browsers support at least
+          ECMAScript 3. On June 17, 2015, ECMA International published the sixth
+          major version of ECMAScript, which is officially called ECMAScript 2015
+          but is still more commonly referred to as ES6 or ES2015.
+        </p>
+        <p>
+          Do not confuse JavaScript with the Java programming language. Both
+          "Java" and "JavaScript" are trademarks or registered trademarks of
+          Oracle in the U.S. and other countries. However, the two programming
+          languages have very different syntax, semantics, and use.
+        </p>
+        <p>
+          To get started with JavaScript, you only need a modern web browser.
+          Open your browser's developer console to start writing and testing
+          JavaScript code immediately.
+        </p>
+      </section>
+
+      <section class="main-section" id="Variables_and_Data_Types">
+        <header>Variables and Data Types</header>
+        <p>
+          JavaScript has three keywords for declaring variables:
+          <code>var</code>, <code>let</code>, and <code>const</code>. The
+          <code>let</code> and <code>const</code> keywords were introduced in
+          ES6 and are now the preferred way to declare variables.
+        </p>
+        <p>
+          JavaScript is a dynamically typed language, meaning you do not need to
+          specify the data type of a variable when declaring it. The type is
+          determined automatically at runtime. The main data types in JavaScript
+          are:
+        </p>
+        <ul>
+          <li><strong>Number</strong> – integers and floating-point numbers</li>
+          <li><strong>String</strong> – text values</li>
+          <li><strong>Boolean</strong> – <code>true</code> or <code>false</code></li>
+          <li><strong>null</strong> – intentional absence of a value</li>
+          <li><strong>undefined</strong> – a variable that has not been assigned a value</li>
+          <li><strong>Object</strong> – collections of key/value pairs</li>
+          <li><strong>Symbol</strong> – unique identifiers (ES6)</li>
+        </ul>
+        <p>Here are examples of declaring variables with different data types:</p>
+        <code>
+          let name = "Alice"; // String<br />
+          let age = 30; // Number<br />
+          let isActive = true; // Boolean<br />
+          let score = null; // null<br />
+          let address; // undefined<br />
+          const PI = 3.14159; // Number (constant)
+        </code>
+        <p>
+          Use <code>typeof</code> to check the type of a variable at runtime.
+          For example, <code>typeof name</code> returns <code>"string"</code>
+          and <code>typeof age</code> returns <code>"number"</code>.
+        </p>
+      </section>
+
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>
+          Functions are one of the fundamental building blocks in JavaScript. A
+          function is a reusable block of code designed to perform a particular
+          task. Functions are executed when they are called (invoked).
+        </p>
+        <p>
+          JavaScript provides several ways to define functions. The traditional
+          way uses the <code>function</code> keyword, while ES6 introduced arrow
+          functions as a more concise syntax.
+        </p>
+        <code>
+          // Function declaration<br />
+          function greet(name) {<br />
+          &nbsp;&nbsp;return "Hello, " + name + "!";<br />
+          }<br /><br />
+          // Function expression<br />
+          const greet = function(name) {<br />
+          &nbsp;&nbsp;return "Hello, " + name + "!";<br />
+          };<br /><br />
+          // Arrow function (ES6)<br />
+          const greet = (name) =&gt; "Hello, " + name + "!";
+        </code>
+        <p>
+          Functions can accept parameters and return values. If no
+          <code>return</code> statement is provided, the function returns
+          <code>undefined</code> by default.
+        </p>
+        <p>
+          JavaScript also supports higher-order functions — functions that take
+          other functions as arguments or return them. This is a key concept in
+          functional programming with JavaScript, and is widely used with array
+          methods like <code>map</code>, <code>filter</code>, and
+          <code>reduce</code>.
+        </p>
+        <code>
+          const numbers = [1, 2, 3, 4, 5];<br />
+          const doubled = numbers.map(n =&gt; n * 2);<br />
+          // doubled: [2, 4, 6, 8, 10]<br /><br />
+          const evens = numbers.filter(n =&gt; n % 2 === 0);<br />
+          // evens: [2, 4]
+        </code>
+      </section>
+
+      <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <p>
+          Control flow refers to the order in which individual statements,
+          instructions, or function calls are executed. JavaScript provides
+          several control flow structures including conditionals and loops.
+        </p>
+        <p>
+          The <code>if...else</code> statement executes a block of code if a
+          specified condition is truthy. If the condition is falsy, another block
+          of code (the <code>else</code> block) can be executed.
+        </p>
+        <code>
+          let temperature = 25;<br /><br />
+          if (temperature &gt; 30) {<br />
+          &nbsp;&nbsp;console.log("It's hot outside!");<br />
+          } else if (temperature &gt; 20) {<br />
+          &nbsp;&nbsp;console.log("It's a nice day!");<br />
+          } else {<br />
+          &nbsp;&nbsp;console.log("It's a bit cold.");<br />
+          }
+        </code>
+        <p>
+          JavaScript provides several looping structures: <code>for</code>,
+          <code>while</code>, <code>do...while</code>, <code>for...of</code>,
+          and <code>for...in</code>. Choose the loop type that best matches your
+          use case.
+        </p>
+        <p>
+          The <code>switch</code> statement evaluates an expression and executes
+          the case that matches. It is often a cleaner alternative to multiple
+          <code>if...else if</code> chains when comparing the same variable
+          against many values.
+        </p>
+        <code>
+          for (let i = 0; i &lt; 5; i++) {<br />
+          &nbsp;&nbsp;console.log(i);<br />
+          }<br /><br />
+          const fruits = ["apple", "banana", "cherry"];<br />
+          for (const fruit of fruits) {<br />
+          &nbsp;&nbsp;console.log(fruit);<br />
+          }
+        </code>
+      </section>
+
+      <section class="main-section" id="Objects_and_Arrays">
+        <header>Objects and Arrays</header>
+        <p>
+          Objects are collections of properties, where each property is a
+          key-value pair. Objects are used to model real-world entities and are
+          the foundation of object-oriented programming in JavaScript.
+        </p>
+        <p>
+          Arrays are ordered collections of values. They can hold values of any
+          type, including numbers, strings, objects, and even other arrays.
+          Arrays are zero-indexed, meaning the first element is at index
+          <code>0</code>.
+        </p>
+        <code>
+          // Object literal<br />
+          const person = {<br />
+          &nbsp;&nbsp;name: "Alice",<br />
+          &nbsp;&nbsp;age: 30,<br />
+          &nbsp;&nbsp;greet() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return `Hi, I'm ${this.name}`;<br />
+          &nbsp;&nbsp;}<br />
+          };<br /><br />
+          console.log(person.name); // "Alice"<br />
+          console.log(person.greet()); // "Hi, I'm Alice"
+        </code>
+        <p>
+          JavaScript arrays come with many built-in methods such as
+          <code>push</code>, <code>pop</code>, <code>shift</code>,
+          <code>unshift</code>, <code>splice</code>, <code>slice</code>,
+          <code>map</code>, <code>filter</code>, and <code>reduce</code>.
+          These methods make it easy to manipulate and transform data.
+        </p>
+        <p>
+          Destructuring assignment is a powerful ES6 feature that allows you to
+          unpack values from arrays or properties from objects into distinct
+          variables, making your code cleaner and more readable.
+        </p>
+        <code>
+          // Array destructuring<br />
+          const [first, second, ...rest] = [1, 2, 3, 4, 5];<br /><br />
+          // Object destructuring<br />
+          const { name, age } = person;<br />
+          console.log(name); // "Alice"<br />
+          console.log(age); // 30
+        </code>
+      </section>
+
+      <section class="main-section" id="ES6_Features">
+        <header>ES6 Features</header>
+        <p>
+          ECMAScript 2015 (ES6) introduced many new features that modernized
+          JavaScript. These features make the language more expressive, reduce
+          boilerplate, and improve readability. Key ES6 features include arrow
+          functions, template literals, destructuring, default parameters,
+          rest/spread operators, classes, modules, and Promises.
+        </p>
+        <p>
+          Template literals allow you to embed expressions inside strings using
+          backtick syntax. They support multi-line strings and expression
+          interpolation.
+        </p>
+        <code>
+          const name = "World";<br />
+          const greeting = `Hello, ${name}!`;<br />
+          console.log(greeting); // "Hello, World!"<br /><br />
+          // Multi-line string<br />
+          const message = `This is line one.<br />
+          This is line two.`;
+        </code>
+        <p>
+          Classes in ES6 provide a cleaner, more familiar syntax for creating
+          objects and handling inheritance. Under the hood, they still use
+          JavaScript's prototype-based inheritance.
+        </p>
+        <p>
+          The spread (<code>...</code>) operator allows an iterable such as an
+          array to be expanded in places where zero or more arguments or elements
+          are expected. The rest parameter syntax allows a function to accept an
+          indefinite number of arguments as an array.
+        </p>
+        <code>
+          class Animal {<br />
+          &nbsp;&nbsp;constructor(name) {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br />
+          &nbsp;&nbsp;}<br />
+          &nbsp;&nbsp;speak() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return `${this.name} makes a sound.`;<br />
+          &nbsp;&nbsp;}<br />
+          }<br /><br />
+          class Dog extends Animal {<br />
+          &nbsp;&nbsp;speak() {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return `${this.name} barks.`;<br />
+          &nbsp;&nbsp;}<br />
+          }
+        </code>
+      </section>
+
+      <section class="main-section" id="Asynchronous_JavaScript">
+        <header>Asynchronous JavaScript</header>
+        <p>
+          JavaScript is single-threaded, meaning it can only execute one piece
+          of code at a time. Asynchronous programming allows JavaScript to
+          perform long-running tasks (like network requests or file reads)
+          without blocking the main thread, keeping applications responsive.
+        </p>
+        <p>
+          Historically, callbacks were used to handle asynchronous operations.
+          Promises, introduced in ES6, provide a cleaner way to work with async
+          operations. The <code>async/await</code> syntax, introduced in ES2017,
+          makes asynchronous code look and behave more like synchronous code.
+        </p>
+        <code>
+          // Using Promises<br />
+          fetch("https://api.example.com/data")<br />
+          &nbsp;&nbsp;.then(response =&gt; response.json())<br />
+          &nbsp;&nbsp;.then(data =&gt; console.log(data))<br />
+          &nbsp;&nbsp;.catch(error =&gt; console.error(error));
+        </code>
+        <p>
+          The <code>async</code> keyword before a function makes it always
+          return a Promise. The <code>await</code> keyword can only be used
+          inside an <code>async</code> function and pauses execution until the
+          Promise resolves.
+        </p>
+        <p>
+          Error handling in async/await is done using <code>try...catch</code>
+          blocks, providing a familiar syntax for handling both synchronous and
+          asynchronous errors in the same way.
+        </p>
+        <code>
+          async function getData() {<br />
+          &nbsp;&nbsp;try {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;const response = await fetch("https://api.example.com/data");<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;const data = await response.json();<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(data);<br />
+          &nbsp;&nbsp;} catch (error) {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;console.error("Error:", error);<br />
+          &nbsp;&nbsp;}<br />
+          }
+        </code>
+      </section>
+    </main>
+  </body>
+</html>
